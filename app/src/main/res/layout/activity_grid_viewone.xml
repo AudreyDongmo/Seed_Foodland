@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GridViewone">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        app:elevation="0dp"
+        android:layout_height="300dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shapeframeone"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+            >
+
+            <TextView
+                android:id="@+id/welcom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Welcome"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:elevation="1dp"
+                android:gravity="center"
+                android:layout_marginTop="255dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/zonerecherch">
+
+                    <ImageView
+                        android:id="@+id/srch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="34dp"
+                        android:src="@drawable/search"
+                        android:layout_marginTop="12dp"
+                        android:scaleType="center"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="60dp"
+                        android:hint="Search"
+                        android:layout_toEndOf="@+id/srch"
+                        android:textColorHint="@color/themeblue"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+
+        android:padding="14dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/customRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           />
+
+    </LinearLayout>
+
+
+
+
+    <!--  <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+         <LinearLayout
+
+             android:padding="14dp"
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="8">
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+
+                 <include
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:layout_weight="1"
+                     android:layout_margin="8dp"
+                     layout="@layout/custom_row" />
+
+                 <include
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:layout_weight="1"
+                     android:layout_margin="8dp"
+                     layout="@layout/custom_row" />
+
+
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+
+                 <include
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:layout_weight="1"
+                     android:layout_margin="8dp"
+                     layout="@layout/custom_row" />
+
+                 <include
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:layout_weight="1"
+                     android:layout_margin="8dp"
+                     layout="@layout/custom_row" />
+
+
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+
+                 <include
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:layout_weight="1"
+                     android:layout_margin="8dp"
+                     layout="@layout/custom_row" />
+
+                 <include
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:layout_weight="1"
+                     android:layout_margin="8dp"
+                     layout="@layout/custom_row" />
+
+
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+
+                 <include
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:layout_weight="1"
+                     android:layout_margin="8dp"
+                     layout="@layout/custom_row" />
+
+                 <include
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:layout_weight="1"
+                     android:layout_margin="8dp"
+                     layout="@layout/custom_row" />
+
+
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+
+                 <include
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:layout_weight="1"
+                     android:layout_margin="8dp"
+                     layout="@layout/custom_row" />
+
+                 <include
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:layout_weight="1"
+                     android:layout_margin="8dp"
+                     layout="@layout/custom_row" />
+
+
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+
+                 <include
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:layout_weight="1"
+                     android:layout_margin="8dp"
+                     layout="@layout/custom_row" />
+
+                 <include
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:layout_weight="1"
+                     android:layout_margin="8dp"
+                     layout="@layout/custom_row" />
+
+
+             </LinearLayout>
+
+
+         </LinearLayout>
+     </ScrollView>
+ -->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
